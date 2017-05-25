@@ -1,0 +1,14 @@
+{
+	"name" : "testForRestAPI",
+	"version" : "0.0.1",
+	"author":"mzb",
+	"description": "肾病app服务器API测试",
+	"scripts": {
+		"test": "./node_modules/mocha/bin/mocha -t 3000"
+	},
+	"dependencies": {
+		"chai": "3.5.0",
+		"superagent": "1.7.0",
+		"mocha": "3.4.2"
+	}
+}
