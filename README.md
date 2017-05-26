@@ -5,6 +5,7 @@
 	nodejs、mocha
 
 2. 使用:
+
 	1）克隆到本地，进入根目录运行以下命令以安装相应依赖
 	
 		npm install
