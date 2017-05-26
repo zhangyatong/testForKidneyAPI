@@ -8,17 +8,13 @@ describe('医生端登录流程相关测试',function()
 {
 	describe('验证手机号是否已注册->'+config.routes.getUserID,function()
 	{
-		var req;
-		var phoneNum;
-			
-		it('已注册的手机号', function(done){
+		var varlidPhoneNum=config.validDoc.username;
+		var validReq=help.createRequest(config.baseUrl,config.routes.getUserID,{
+																					"phoneNo":varlidPhoneNum
+																				});
+		it('已注册的手机号 param->'+varlidPhoneNum, function(done){
 
-			phoneNum=config.validDoc.username;
-			req=help.createRequest(config.baseUrl,config.routes.getUserID,{
-				"phoneNo":phoneNum
-			})
-
-			request.get(req)
+			request.get(validReq)
 			.end(function(err, res){
 
 				var data=res.body;
@@ -36,15 +32,13 @@ describe('医生端登录流程相关测试',function()
 			});
 		});
 
-		
-		it('无效的手机号',function(done){
+		var invarlidPhoneNum=help.createInvalidPhoneNumber();
+		var invalidReq=help.createRequest(config.baseUrl,config.routes.getUserID,{
+																					"phoneNo":invarlidPhoneNum
+																				});
+		it('无效的手机号 param->'+invarlidPhoneNum,function(done){
 
-			phoneNum=help.createInvalidPhoneNumber();
-			req=help.createRequest(config.baseUrl,config.routes.getUserID,{
-				"phoneNo":phoneNum
-			})
-
-			request.get(req)
+			request.get(invalidReq)
 			.end(function(err,res){
 
 				var data=res.body;
