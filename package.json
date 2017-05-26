@@ -4,7 +4,7 @@
 	"author":"mzb",
 	"description": "肾病app服务器API测试",
 	"scripts": {
-		"test": "./node_modules/mocha/bin/mocha -t 3000"
+		"test": "./node_modules/mocha/bin/mocha"
 	},
 	"dependencies": {
 		"chai": "3.5.0",

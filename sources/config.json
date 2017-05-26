@@ -1,0 +1,10 @@
+{
+	"baseUrl":"http://121.43.107.106:4050",
+	"routes":{
+		"getUserID":"/user/getUserID"
+	},
+	"validDoc":{
+		"username":"13208017796",
+		"password":"123456"
+	}
+}
