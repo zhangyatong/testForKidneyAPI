@@ -73,6 +73,7 @@ describe('病人端登录流程相关测试',function()
 		var varlidRole=config.validPatient.role;
 		var validReq=help.createRequest(config.baseUrl,config.routes.logIn);
 		console.log(validReq)
+		it('登陆成功 param->'+varlidPhoneNum+' '+varlidPassword+' '+varlidRole, function(done){
 
 			request
 			// .post(validReq,{
