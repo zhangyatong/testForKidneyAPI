@@ -1,10 +1,17 @@
 {
 	"baseUrl":"http://121.43.107.106:4050",
 	"routes":{
-		"getUserID":"/user/getUserID"
+		"getUserID":"/user/getUserID",
+		"logIn":"/user/login",
+		"reset":"/user/reset"
 	},
 	"validDoc":{
 		"username":"13208017796",
 		"password":"123456"
+	},
+	"validPatient":{
+		"username":"13180016016",
+		"password":"123456",
+		"role":"patient"
 	}
 }
